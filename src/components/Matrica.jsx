@@ -1,9 +1,9 @@
 import React from 'react'
 import Celija from './Celija'
 
-export default function Matrica({podaci,onChange,readOnly}) {
+export default function Matrica({podaci,onChange,readOnly,sufiks}) {
     return (
-      <div>
+      <div style={{ position: 'relative' }}>
         {
             podaci.map((red,i)=>{
                 return(
@@ -24,6 +24,7 @@ export default function Matrica({podaci,onChange,readOnly}) {
                 )
             })
         }
+        <div style={{ position: 'absolute', right: '-40px', bottom: '-5px', fontSize: '12px', fontWeight: '600' }}>{sufiks}</div>
       </div>
     )
 }
